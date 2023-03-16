@@ -10,9 +10,8 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
   await app.listen(PORT, () => {
-    logger.info(`App is listening on port ${PORT} ...`);
+    logger.info(`App is running on port ${PORT} ...`);
+    listAllRoutes(app);
   });
-
-  listAllRoutes(app);
 }
 bootstrap();
